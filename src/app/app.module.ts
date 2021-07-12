@@ -7,6 +7,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { VideoCardComponent } from './components/video-card/video-card.component';
+import { VideoDetailComponent } from './pages/video-detail/video-detail.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { VideoCardComponent } from './components/video-card/video-card.component
     GalleryComponent,
     HomeComponent,
     NavigationComponent,
-    VideoCardComponent
+    VideoCardComponent,
+    VideoDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
