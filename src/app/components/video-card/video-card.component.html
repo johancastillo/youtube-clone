@@ -1,9 +1,9 @@
 <div class="video-card">
   <div class="miniatura">
-    <img src="assets/images/01.jpg" alt="">
+    <img src="{{data.miniatura}}" alt="">
 
     <div class="duration">
-      <p>3:00</p>
+      <p>{{data.duration}}</p>
     </div>
   </div>
 
@@ -15,15 +15,15 @@
     <div class="description">
       <a href="#">
         <h4>
-          Store Wide Sale - Up to 95% Off
+          {{data.title}}
         </h4>
       </a>
 
       <p>
-        Learn Python, Excel, Web Development, JavaScript, Data Science, AWS Certification, & more.
+        {{data.description}}
         <br>
         <br>
-        Hace 2 años
+        {{data.datetime}}
       </p>
     </div>
 
