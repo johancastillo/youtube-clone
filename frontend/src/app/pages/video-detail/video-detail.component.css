@@ -1,0 +1,11 @@
+.columns{
+  display: flex;
+}
+
+.columns .primary{
+  width: 60%;
+}
+
+video{
+  width: 100%;
+}
