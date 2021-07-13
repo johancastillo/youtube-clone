@@ -48,7 +48,10 @@ class VideosController extends Controller
      */
     public function show($id)
     {
-        //
+        $video = Videos::findOrFail($id);
+
+        return \response($video);
+
     }
 
     /**
@@ -60,7 +63,17 @@ class VideosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $video = Videos::findOrFail($id);
+
+      $video->title = $request->get('title');
+      $video->description = $request->get('description');
+      $video->duration = $request->get('duration');
+      $video->user = $request->get('user');
+      $video->status = $request->get('status');
+
+      $video->save();
+
+      return \response($video);
     }
 
     /**
@@ -71,6 +84,8 @@ class VideosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Videos::destroy($id);
+        return \response( ['content' => "El video con id ${id} ha sido eliminado" ]);
+
     }
 }
