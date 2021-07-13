@@ -9,6 +9,10 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { VideoCardComponent } from './components/video-card/video-card.component';
 import { VideoDetailComponent } from './pages/video-detail/video-detail.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { FormVideoComponent } from './components/form-video/form-video.component';
+import { FormLoginComponent } from './components/form-login/form-login.component';
+import { HttpClientModule } from "@angular/common/http";
+import { VideosServices } from './services/videos.services'
 
 @NgModule({
   declarations: [
@@ -18,13 +22,16 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     NavigationComponent,
     VideoCardComponent,
     VideoDetailComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FormVideoComponent,
+    FormLoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [VideosServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

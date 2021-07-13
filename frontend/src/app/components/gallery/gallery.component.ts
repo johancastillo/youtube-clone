@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { VideosServices } from '../../services/videos.services';
+
 
 @Component({
   selector: 'app-gallery',
@@ -23,9 +25,14 @@ export class GalleryComponent implements OnInit {
     {id: 13, miniatura: "assets/images/01.jpg", duration: "4:00", userImage: "https://yt3.ggpht.com/ytc/AKedOLToU1sSfIWU5xGmwyGTWqP9iqY4MlgRolTMbTQeqg=s68-c-k-c0x00ffffff-no-rj", title: "¿Se puede aprender inglés en Platzi? 🤔", description: "“Memories” is out now:",  datetime: "Hace 2 años"},
   ];
 
-  constructor() { }
+  constructor(
+    private videosServices: VideosServices
+  ) { }
 
   ngOnInit(): void {
+    this.videosServices.getAllVideos()
+    .then( response => this.videos = response )
+    .catch( error => console.log(error) )
   }
 
 }

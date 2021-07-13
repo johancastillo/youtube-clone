@@ -27,13 +27,16 @@ class VideosController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-          'title' => 'required | max:100',
-          'description' => 'required',
-          'duration' => 'required',
-          'user' => 'required',
-          'status' => 'required',
-        ]);
+      $request->validate([
+        'title' => 'required | max:100',
+        'description' => 'required',
+        'miniatura' => 'required',
+        'user_image' => 'required',
+        'duration' => 'required',
+        'datetime' => 'required',
+        'user' => 'required',
+        'status' => 'required',
+      ]);
 
         $videos = Videos::create($request->all());
 
@@ -67,7 +70,10 @@ class VideosController extends Controller
 
       $video->title = $request->get('title');
       $video->description = $request->get('description');
+      $video->miniatura = $request->get('miniatura');
+      $video->user_image = $request->get('user_image');
       $video->duration = $request->get('duration');
+      $video->datetime = $request->get('datetime');
       $video->user = $request->get('user');
       $video->status = $request->get('status');
 

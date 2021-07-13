@@ -1,4 +1,12 @@
-<div class="gallery">
+<div class="container mt-4">
+
+  <a  routerLink="/create-video">
+    <button type="button" class="btn btn-primary">Crear video</button>
+  </a>
+
+</div>
+
+<div class="container mt-4 gallery">
 
   <app-video-card *ngFor="let video of videos"
     [data]="video"

@@ -1,0 +1,32 @@
+.navigation{
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation img{
+  width: 100px;
+}
+
+.navigation ul{
+  display: flex;
+  width: 30%;
+  margin: 0 !important;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navigation ul li{
+  list-style: none;
+}
+
+.navigation ul li a{
+  text-decoration: none;
+  color: #000;
+}
+
+.navigation ul li a:hover{
+  color: #f00;
+}

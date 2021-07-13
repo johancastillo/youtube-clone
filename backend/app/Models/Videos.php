@@ -12,7 +12,10 @@ class Videos extends Model
     protected $fillable = [
       'title',
       'description',
+      'miniatura',
+      'user_image',
       'duration',
+      'datetime',
       'user',
       'status'
     ];
