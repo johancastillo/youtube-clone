@@ -10,11 +10,22 @@
       <h1 class="title">{{video.title}}</h1>
       <p class="description">{{video.description}}</p>
 
+      <div class="actions">
+
       <a routerLink="/edit-video/{{video.id}}">
         <button class="btn btn-primary" name="button">
           Editar video
         </button>
       </a>
+
+      <a (click)="deleteVideo()">
+        <button class="btn btn-primary" name="button">
+          Eliminar
+        </button>
+      </a>
+
+    </div>
+
 
     </div>
 

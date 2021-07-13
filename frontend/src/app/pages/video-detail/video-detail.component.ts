@@ -29,5 +29,16 @@ export class VideoDetailComponent implements OnInit {
   }
 
 
+  deleteVideo(){
+    let validated = confirm('Eliminar video')
+
+    if(validated){
+      this.videosServices.deleteVideo(this.id)
+      .then(response => this.video = response )
+    }
+
+
+  }
+
 
 }

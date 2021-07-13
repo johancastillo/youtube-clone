@@ -9,3 +9,7 @@
 video{
   width: 100%;
 }
+
+.actions a{
+  margin-right: 10px;
+}

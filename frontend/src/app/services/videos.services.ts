@@ -35,6 +35,10 @@ export class VideosServices{
     return this.http.put(`${this.server}/videos/${id}`, video).toPromise();
   }
 
+  deleteVideo(id:any){
+    return this.http.delete(`${this.server}/videos/${id}`).toPromise();
+  }
+
 
 
 }
