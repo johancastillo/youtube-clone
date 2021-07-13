@@ -16,7 +16,6 @@ class Videos extends Model
       'user_image',
       'duration',
       'datetime',
-      'user',
       'status'
     ];
 }

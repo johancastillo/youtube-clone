@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 
 
@@ -25,6 +25,14 @@ export class VideosServices{
 
   getOneVideo(id:any){
       return this.http.get(`${this.server}/videos/${id}`).toPromise();
+  }
+
+  postVideo(video:any){
+    return this.http.post(`${this.server}/videos`, video).toPromise();
+  }
+
+  putVideo(video:any, id:any){
+    return this.http.put(`${this.server}/videos/${id}`, video).toPromise();
   }
 
 

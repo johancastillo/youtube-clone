@@ -34,7 +34,6 @@ class VideosController extends Controller
         'user_image' => 'required',
         'duration' => 'required',
         'datetime' => 'required',
-        'user' => 'required',
         'status' => 'required',
       ]);
 
@@ -74,7 +73,6 @@ class VideosController extends Controller
       $video->user_image = $request->get('user_image');
       $video->duration = $request->get('duration');
       $video->datetime = $request->get('datetime');
-      $video->user = $request->get('user');
       $video->status = $request->get('status');
 
       $video->save();

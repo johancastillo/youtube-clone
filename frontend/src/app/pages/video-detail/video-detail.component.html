@@ -7,6 +7,15 @@
 
     <div class="primary">
       <video id="video" src="assets/videos/01.mp4" autoplay controls poster="assets/images/01.jpg"></video>
+      <h1 class="title">{{video.title}}</h1>
+      <p class="description">{{video.description}}</p>
+
+      <a routerLink="/edit-video/{{video.id}}">
+        <button class="btn btn-primary" name="button">
+          Editar video
+        </button>
+      </a>
+
     </div>
 
     <div class="secondary">

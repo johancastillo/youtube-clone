@@ -1,0 +1,10 @@
+.form-video{
+  width: 500px;
+}
+
+.container-form{
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

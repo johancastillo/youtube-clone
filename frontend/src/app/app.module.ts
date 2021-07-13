@@ -13,6 +13,9 @@ import { FormVideoComponent } from './components/form-video/form-video.component
 import { FormLoginComponent } from './components/form-login/form-login.component';
 import { HttpClientModule } from "@angular/common/http";
 import { VideosServices } from './services/videos.services'
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
+import { EditVideoComponent } from './components/edit-video/edit-video.component';
+
 
 @NgModule({
   declarations: [
@@ -24,12 +27,15 @@ import { VideosServices } from './services/videos.services'
     VideoDetailComponent,
     PageNotFoundComponent,
     FormVideoComponent,
-    FormLoginComponent
+    FormLoginComponent,
+    EditVideoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [VideosServices],
   bootstrap: [AppComponent]

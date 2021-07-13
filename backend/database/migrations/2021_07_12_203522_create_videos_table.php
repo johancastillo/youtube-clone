@@ -21,7 +21,6 @@ class CreateVideosTable extends Migration
             $table->string('user_image');
             $table->string('duration');
             $table->string('datetime');
-            $table->string('user');
             $table->string('status');
             $table->timestamps();
         });
