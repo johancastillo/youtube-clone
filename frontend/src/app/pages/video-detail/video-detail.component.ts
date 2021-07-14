@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { VideosServices } from '../../services/videos.services';
 import Swal from 'sweetalert2';
@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class VideoDetailComponent implements OnInit {
 
-  @ViewChild("video") videoEl: ElementRef;
+  
 
   public id: any;
   public video: any;
@@ -31,8 +31,15 @@ export class VideoDetailComponent implements OnInit {
     .then(response => {
       this.video = response;
 
-      //console.log(response);
+
+      //boxVideo.innerHTML = "<h1>Holaa</h1>";
+
+
     });
+
+  }
+
+  ngAfterViewInit(){
 
   }
 
