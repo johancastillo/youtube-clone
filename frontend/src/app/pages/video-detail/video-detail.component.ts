@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class VideoDetailComponent implements OnInit {
 
-  
+  @ViewChild("box") box: ElementRef;
 
   public id: any;
   public video: any;
@@ -41,6 +41,14 @@ export class VideoDetailComponent implements OnInit {
 
   ngAfterViewInit(){
 
+  }
+
+  ngAfterViewChecked(){
+    let boxVideo = this.box.nativeElement;
+
+    //console.log(this.box.nativeElement)
+
+    boxVideo.innerHTML = this.video.url;
   }
 
 
