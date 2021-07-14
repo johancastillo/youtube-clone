@@ -13,6 +13,7 @@ class Videos extends Model
       'title',
       'description',
       'miniatura',
+      'url',
       'user_image',
       'duration',
       'datetime',

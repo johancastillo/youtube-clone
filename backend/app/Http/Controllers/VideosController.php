@@ -31,6 +31,7 @@ class VideosController extends Controller
         'title' => 'required | max:100',
         'description' => 'required',
         'miniatura' => 'required',
+        'url' => 'required',
         'user_image' => 'required',
         'duration' => 'required',
         'datetime' => 'required',
@@ -70,6 +71,7 @@ class VideosController extends Controller
       $video->title = $request->get('title');
       $video->description = $request->get('description');
       $video->miniatura = $request->get('miniatura');
+      $video->url = $request->get('url');
       $video->user_image = $request->get('user_image');
       $video->duration = $request->get('duration');
       $video->datetime = $request->get('datetime');

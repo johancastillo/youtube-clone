@@ -15,6 +15,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { VideosServices } from './services/videos.services'
 import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { EditVideoComponent } from './components/edit-video/edit-video.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { FormRegisterComponent } from './components/form-register/form-register.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { EditVideoComponent } from './components/edit-video/edit-video.component
     PageNotFoundComponent,
     FormVideoComponent,
     FormLoginComponent,
-    EditVideoComponent
+    EditVideoComponent,
+    LoginPageComponent,
+    RegisterPageComponent,
+    FormRegisterComponent
   ],
   imports: [
     BrowserModule,
