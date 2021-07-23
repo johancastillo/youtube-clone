@@ -40,7 +40,7 @@ export class VideoDetailComponent implements OnInit {
   }
 
   ngAfterViewInit(){
-
+    
   }
 
   ngAfterViewChecked(){

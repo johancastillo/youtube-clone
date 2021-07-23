@@ -3,9 +3,11 @@
   margin-bottom: 15px;
 }
 
-.video-card img{
+.video-card .miniatura img{
   width: 100%;
   cursor: pointer;
+  height: 148px;
+  object-fit: cover;
 }
 
 .video-card .description{
@@ -58,6 +60,7 @@ a{
   width: 45px;
   height: 45px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .video-card .content{
